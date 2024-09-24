@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vh;
+}
+.rating-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.rating-box header {
+  font-size: 40px;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+.stars i {
+  font-size: 35px;
+  color: grey;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.stars i.active {
+  color: gold;
+}
+.stars i:hover {
+  transform: scale(1.3);
+}
