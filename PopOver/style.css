@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.pop-over {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: inline-block;
+  /* min-he: 100vh; */
+}
+
+.popover {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-radius: 5px;
+}
+.popover p {
+  font-size: 20px;
+}
+
+.popover::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #ccc transparent;
+}
+
+.popover::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 9px 9px 9px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.pop-btn {
+  height: 60px;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pop-btn:hover {
+  background-color: #0056b3;
+}
